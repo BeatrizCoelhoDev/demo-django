@@ -39,11 +39,13 @@
                 <h2 class="text-xl font-semibold mb-2">Django</h2>
                 <p class="text-slate-400 text-sm">Framework web em Python, "batteries included" — vem com ORM, admin e tudo mais.</p>
             </article>
+
             <article class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 hover:bg-white/10 transition">
                 <div class="text-3xl mb-3">🎨</div>
                 <h2 class="text-xl font-semibold mb-2">Tailwind CSS</h2>
                 <p class="text-slate-400 text-sm">Utility-first CSS — você compõe estilos direto no HTML, sem inventar nomes de classe.</p>
             </article>
+
             <article class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 hover:bg-white/10 transition">
                 <div class="text-3xl mb-3">🐳</div>
                 <h2 class="text-xl font-semibold mb-2">Docker Compose</h2>
@@ -53,6 +55,7 @@
 
         <section class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8 max-w-3xl">
             <h2 class="text-2xl font-bold mb-4">Mensagens do banco de dados</h2>
+
             <p class="text-slate-400 text-sm mb-6">
                 Os itens abaixo são lidos do SQLite. Adicione novos pelo
                 <a href="/admin/" class="text-indigo-300 underline hover:text-indigo-200">painel admin</a>.
@@ -63,16 +66,31 @@
                     {% for m in mensagens %}
                         <li class="border-l-2 border-emerald-400 pl-4 py-1">
                             <h3 class="font-semibold">{{ m.titulo }}</h3>
+
+                            {% if m.categoria %}
+                                <span class="inline-block px-2 py-0.5 mt-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full">
+                                    {{ m.categoria.nome }}
+                                </span>
+                            {% endif %}
+
                             <p class="text-sm text-slate-300">{{ m.conteudo }}</p>
+
                             <span class="text-xs text-slate-400">por {{ m.autor }}</span>
-                            <span class="text-xs text-slate-500">{{ m.criada_em|date:"d/m/Y H:i" }}</span>
+
+                            <span class="text-xs text-slate-500">
+                                {{ m.criada_em|date:"d/m/Y H:i" }}
+                            </span>
                         </li>
                     {% endfor %}
                 </ul>
             {% else %}
                 <div class="text-center py-8 text-slate-400">
                     <p class="mb-2">Nenhuma mensagem ainda.</p>
-                    <p class="text-sm">Crie uma no <a href="/admin/" class="text-indigo-300 underline">admin</a> para vê-la aqui.</p>
+                    <p class="text-sm">
+                        Crie uma no
+                        <a href="/admin/" class="text-indigo-300 underline">admin</a>
+                        para vê-la aqui.
+                    </p>
                 </div>
             {% endif %}
         </section>
