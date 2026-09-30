@@ -6,7 +6,7 @@
 
 ## Imagem do estado do projeto
 
-![Imagem do estado do projeto - 1](print1.jpeg)
-![Imagem do estado do projeto - 2](print2.jpeg)
-![Imagem do estado do projeto - 3](print3.jpeg)
-![Imagem do estado do projeto - 3](print3.jpeg)
+![Imagem do estado do projeto - 1](print4.jpeg)
+![Imagem do estado do projeto - 2](print5.jpeg)
+![Imagem do estado do projeto - 3](print6.jpeg)
+![Imagem do estado do projeto - 3](print7.jpeg)
