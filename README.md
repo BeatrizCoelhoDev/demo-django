@@ -6,5 +6,5 @@
 
 ## Imagem do estado do projeto
 
-![Imagem do estado do projeto - 1](print8.jpe)
+![Imagem do estado do projeto - 1](print8.jpeg)
 
